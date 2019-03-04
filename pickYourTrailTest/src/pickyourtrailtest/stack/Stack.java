@@ -30,10 +30,15 @@ public class Stack {
     }
 
     public void pop() {
+       // System.out.println("gfukfkuyyu");
+      //  if (!this.isEmpty()) {
+            //this.viewTop();
             if(arrList.size()>0){
-            arrList.remove(arrList.size()-1);
-            }
+            arrList.remove(arrList.size()-1);}
+          //  System.out.println("gfukfkuyyu  "+tmp);
              viewTop();
+       // } 
+
     }
 
     public void viewTop() {
@@ -61,6 +66,9 @@ public class Stack {
 //    
     public void inc(int e,int k){
         if (!this.isEmpty()) {
+            if(e>=arrList.size()){
+                e=arrList.size();
+            }
             for(int i=0;i<e;i++){
                 arrList.set(i, arrList.get(i)+k);
             }
