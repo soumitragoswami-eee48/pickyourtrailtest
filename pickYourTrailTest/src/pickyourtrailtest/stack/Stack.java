@@ -30,14 +30,10 @@ public class Stack {
     }
 
     public void pop() {
-       // System.out.println("gfukfkuyyu");
-      //  if (!this.isEmpty()) {
-            //this.viewTop();
+            if(arrList.size()>0){
             arrList.remove(arrList.size()-1);
-          //  System.out.println("gfukfkuyyu  "+tmp);
+            }
              viewTop();
-       // } 
-
     }
 
     public void viewTop() {
