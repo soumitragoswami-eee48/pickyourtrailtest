@@ -49,6 +49,9 @@ public class PickYourTrailTest {
                 //if (tmp.length == 2) {
                     switch (tmp[0]) {
                         case "push":
+                            if(tmp.length<2){
+                                System.out.println("invalid push statement");
+                            }
                             myStack.push(Integer.parseInt(tmp[1]));
                             myStack.viewTop();
                             break; 
@@ -56,6 +59,9 @@ public class PickYourTrailTest {
                             myStack.pop();                           
                             break;
                         case "inc":
+                            if(tmp.length<3){
+                                System.out.println("invalid inc statement");
+                            }
                             myStack.inc(Integer.parseInt(tmp[1]), Integer.parseInt(tmp[2]));
                             myStack.viewTop();
                             break;
