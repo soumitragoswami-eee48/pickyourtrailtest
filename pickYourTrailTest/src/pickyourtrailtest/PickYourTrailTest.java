@@ -47,10 +47,11 @@ public class PickYourTrailTest {
             if (instructions[i].contains("push") || instructions[i].contains("pop") || instructions[i].contains("inc")) {
                 String[] tmp = instructions[i].split(" ");
                 //if (tmp.length == 2) {
-                    switch (tmp[0]) {
+                     switch (tmp[0]) {
                         case "push":
                             if(tmp.length<2){
                                 System.out.println("invalid push statement");
+                                break;
                             }
                             myStack.push(Integer.parseInt(tmp[1]));
                             myStack.viewTop();
@@ -61,6 +62,7 @@ public class PickYourTrailTest {
                         case "inc":
                             if(tmp.length<3){
                                 System.out.println("invalid inc statement");
+                                break;
                             }
                             myStack.inc(Integer.parseInt(tmp[1]), Integer.parseInt(tmp[2]));
                             myStack.viewTop();
